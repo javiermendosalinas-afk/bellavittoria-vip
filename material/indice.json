@@ -1,0 +1,538 @@
+[
+ {
+  "n": 1,
+  "tipo": "video",
+  "archivo": "material/videos/v01.mp4",
+  "origen": "09269ebb-3a82-48f1-9f1e-91b620930109.mp4"
+ },
+ {
+  "n": 1,
+  "tipo": "foto",
+  "archivo": "material/fotos/f001.jpg",
+  "origen": "0ab75142-5480-427e-a23a-e9e19f160294.jpg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 2,
+  "tipo": "foto",
+  "archivo": "material/fotos/f002.jpg",
+  "origen": "2ea83d1a-9e25-4386-a01f-4762d763cdfb.jpeg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 2,
+  "tipo": "video",
+  "archivo": "material/videos/v02.mp4",
+  "origen": "33 1760 3524 (1).mp4"
+ },
+ {
+  "n": 3,
+  "tipo": "foto",
+  "archivo": "material/fotos/f003.jpg",
+  "origen": "462bc27d-129d-4f09-85b4-ab998b9d17aa.jpeg",
+  "ancho": 1600,
+  "alto": 1600
+ },
+ {
+  "n": 4,
+  "tipo": "foto",
+  "archivo": "material/fotos/f004.jpg",
+  "origen": "airbnb 2.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 5,
+  "tipo": "foto",
+  "archivo": "material/fotos/f005.jpg",
+  "origen": "airbnb area infantil.png",
+  "ancho": 1024,
+  "alto": 1024
+ },
+ {
+  "n": 6,
+  "tipo": "foto",
+  "archivo": "material/fotos/f006.jpg",
+  "origen": "baño airbnb.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 7,
+  "tipo": "foto",
+  "archivo": "material/fotos/f007.jpg",
+  "origen": "bellavittoria 2 oct 2025.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 8,
+  "tipo": "foto",
+  "archivo": "material/fotos/f008.jpg",
+  "origen": "bv 02.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 9,
+  "tipo": "foto",
+  "archivo": "material/fotos/f009.jpg",
+  "origen": "bv 4.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 10,
+  "tipo": "foto",
+  "archivo": "material/fotos/f010.jpg",
+  "origen": "bv3.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 11,
+  "tipo": "foto",
+  "archivo": "material/fotos/f011.jpg",
+  "origen": "ChatGPT Image 30 ene 2026, 00_02_18.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 12,
+  "tipo": "foto",
+  "archivo": "material/fotos/f012.jpg",
+  "origen": "ChatGPT Image 30 ene 2026, 00_12_52.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 13,
+  "tipo": "foto",
+  "archivo": "material/fotos/f013.jpg",
+  "origen": "ChatGPT Image 30 ene 2026, 00_18_54.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 14,
+  "tipo": "foto",
+  "archivo": "material/fotos/f014.jpg",
+  "origen": "Donde el arte se convierte en hogar (10) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 15,
+  "tipo": "foto",
+  "archivo": "material/fotos/f015.jpg",
+  "origen": "Donde el arte se convierte en hogar (13).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 16,
+  "tipo": "foto",
+  "archivo": "material/fotos/f016.jpg",
+  "origen": "Donde el arte se convierte en hogar (14) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 17,
+  "tipo": "foto",
+  "archivo": "material/fotos/f017.jpg",
+  "origen": "Donde el arte se convierte en hogar (15).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 18,
+  "tipo": "foto",
+  "archivo": "material/fotos/f018.jpg",
+  "origen": "Donde el arte se convierte en hogar (16).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 19,
+  "tipo": "foto",
+  "archivo": "material/fotos/f019.jpg",
+  "origen": "Donde el arte se convierte en hogar (17).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 20,
+  "tipo": "foto",
+  "archivo": "material/fotos/f020.jpg",
+  "origen": "Donde el arte se convierte en hogar (18).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 21,
+  "tipo": "foto",
+  "archivo": "material/fotos/f021.jpg",
+  "origen": "Donde el arte se convierte en hogar (19).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 22,
+  "tipo": "foto",
+  "archivo": "material/fotos/f022.jpg",
+  "origen": "Donde el arte se convierte en hogar (20) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 23,
+  "tipo": "foto",
+  "archivo": "material/fotos/f023.jpg",
+  "origen": "Donde el arte se convierte en hogar (21) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 24,
+  "tipo": "foto",
+  "archivo": "material/fotos/f024.jpg",
+  "origen": "Donde el arte se convierte en hogar (22) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 25,
+  "tipo": "foto",
+  "archivo": "material/fotos/f025.jpg",
+  "origen": "Donde el arte se convierte en hogar (23) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 26,
+  "tipo": "foto",
+  "archivo": "material/fotos/f026.jpg",
+  "origen": "Donde el arte se convierte en hogar (24) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 27,
+  "tipo": "foto",
+  "archivo": "material/fotos/f027.jpg",
+  "origen": "Donde el arte se convierte en hogar (25) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 28,
+  "tipo": "foto",
+  "archivo": "material/fotos/f028.jpg",
+  "origen": "Donde el arte se convierte en hogar (26).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 29,
+  "tipo": "foto",
+  "archivo": "material/fotos/f029.jpg",
+  "origen": "Donde el arte se convierte en hogar (4).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 30,
+  "tipo": "foto",
+  "archivo": "material/fotos/f030.jpg",
+  "origen": "Donde el arte se convierte en hogar (6).png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 31,
+  "tipo": "foto",
+  "archivo": "material/fotos/f031.jpg",
+  "origen": "Donde el arte se convierte en hogar (9) - copia.png",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 32,
+  "tipo": "foto",
+  "archivo": "material/fotos/f032.jpg",
+  "origen": "Dormitorio moderno y elegante con detalles sofisticados.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 33,
+  "tipo": "foto",
+  "archivo": "material/fotos/f033.jpg",
+  "origen": "e3f4856c-d894-46fb-bd5e-422ca39e0f0e.jpg",
+  "ancho": 4096,
+  "alto": 3072
+ },
+ {
+  "n": 34,
+  "tipo": "foto",
+  "archivo": "material/fotos/f034.jpg",
+  "origen": "Espacio moderno y elegante de apartamento.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 35,
+  "tipo": "foto",
+  "archivo": "material/fotos/f035.jpg",
+  "origen": "foto para Airbnb.png",
+  "ancho": 1536,
+  "alto": 1024
+ },
+ {
+  "n": 36,
+  "tipo": "foto",
+  "archivo": "material/fotos/f036.jpg",
+  "origen": "Gemini_Generated_Image_9o4ztf9o4ztf9o4z.png",
+  "ancho": 1376,
+  "alto": 768
+ },
+ {
+  "n": 37,
+  "tipo": "foto",
+  "archivo": "material/fotos/f037.jpg",
+  "origen": "imagen bv oct 06  f1.png",
+  "ancho": 1024,
+  "alto": 1024
+ },
+ {
+  "n": 38,
+  "tipo": "foto",
+  "archivo": "material/fotos/f038.jpg",
+  "origen": "lavanderia airbnb.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 39,
+  "tipo": "foto",
+  "archivo": "material/fotos/f039.jpg",
+  "origen": "Pareja.png",
+  "ancho": 1408,
+  "alto": 736
+ },
+ {
+  "n": 40,
+  "tipo": "foto",
+  "archivo": "material/fotos/f040.jpg",
+  "origen": "recamara airbnb.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 41,
+  "tipo": "foto",
+  "archivo": "material/fotos/f041.jpg",
+  "origen": "Sala de estar moderna y elegante (1).png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 42,
+  "tipo": "foto",
+  "archivo": "material/fotos/f042.jpg",
+  "origen": "Sala de estar moderna y elegante (2).png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 43,
+  "tipo": "foto",
+  "archivo": "material/fotos/f043.jpg",
+  "origen": "Sala de estar moderna y elegante.png",
+  "ancho": 1024,
+  "alto": 1536
+ },
+ {
+  "n": 44,
+  "tipo": "foto",
+  "archivo": "material/fotos/f044.jpg",
+  "origen": "WhatsApp Image 2025-07-05 at 5.41.40 PM (4).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 45,
+  "tipo": "foto",
+  "archivo": "material/fotos/f045.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.35 PM (1).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 46,
+  "tipo": "foto",
+  "archivo": "material/fotos/f046.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.35 PM.jpeg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 47,
+  "tipo": "foto",
+  "archivo": "material/fotos/f047.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.36 PM (1).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 48,
+  "tipo": "foto",
+  "archivo": "material/fotos/f048.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.36 PM (2).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 49,
+  "tipo": "foto",
+  "archivo": "material/fotos/f049.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.36 PM (3).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 50,
+  "tipo": "foto",
+  "archivo": "material/fotos/f050.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.36 PM (4).jpeg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 51,
+  "tipo": "foto",
+  "archivo": "material/fotos/f051.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.36 PM.jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 52,
+  "tipo": "foto",
+  "archivo": "material/fotos/f052.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.39 PM (2).jpeg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 53,
+  "tipo": "foto",
+  "archivo": "material/fotos/f053.jpg",
+  "origen": "WhatsApp Image 2025-07-21 at 7.20.40 PM.jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 54,
+  "tipo": "foto",
+  "archivo": "material/fotos/f054.jpg",
+  "origen": "WhatsApp Image 2025-07-23 at 9.07.50 PM (1).jpeg",
+  "ancho": 1600,
+  "alto": 1600
+ },
+ {
+  "n": 55,
+  "tipo": "foto",
+  "archivo": "material/fotos/f055.jpg",
+  "origen": "WhatsApp Image 2025-10-02 at 6.00.29 PM.jpeg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 56,
+  "tipo": "foto",
+  "archivo": "material/fotos/f056.jpg",
+  "origen": "WhatsApp Image 2026-01-23 at 12.53.58 PM (2).jpeg",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 57,
+  "tipo": "foto",
+  "archivo": "material/fotos/f057.jpg",
+  "origen": "WhatsApp Image 2026-01-23 at 12.53.59 PM.jpeg",
+  "ancho": 1600,
+  "alto": 900
+ },
+ {
+  "n": 58,
+  "tipo": "foto",
+  "archivo": "material/fotos/f058.jpg",
+  "origen": "WhatsApp Image 2026-01-23 at 7.37.16 PM (1).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 59,
+  "tipo": "foto",
+  "archivo": "material/fotos/f059.jpg",
+  "origen": "WhatsApp Image 2026-01-23 at 7.37.16 PM (2).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 60,
+  "tipo": "foto",
+  "archivo": "material/fotos/f060.jpg",
+  "origen": "WhatsApp Image 2026-01-23 at 7.37.16 PM.jpeg",
+  "ancho": 1600,
+  "alto": 1200
+ },
+ {
+  "n": 61,
+  "tipo": "foto",
+  "archivo": "material/fotos/f061.jpg",
+  "origen": "WhatsApp Image 2026-04-08 at 3.55.04 PM (2).jpeg",
+  "ancho": 1200,
+  "alto": 1600
+ },
+ {
+  "n": 3,
+  "tipo": "video",
+  "archivo": "material/videos/v03.mp4",
+  "origen": "WhatsApp Video 2026-01-23 at 7.36.08 PM (1).mp4"
+ },
+ {
+  "n": 4,
+  "tipo": "video",
+  "archivo": "material/videos/v04.mp4",
+  "origen": "WhatsApp Video 2026-01-23 at 7.37.15 PM (1).mp4"
+ },
+ {
+  "n": 5,
+  "tipo": "video",
+  "archivo": "material/videos/v05.mp4",
+  "origen": "WhatsApp Video 2026-01-23 at 7.37.15 PM.mp4"
+ },
+ {
+  "n": 6,
+  "tipo": "video",
+  "archivo": "material/videos/v06.mp4",
+  "origen": "WhatsApp Video 2026-01-23 at 7.37.16 PM (1).mp4"
+ },
+ {
+  "n": 7,
+  "tipo": "video",
+  "archivo": "material/videos/v07.mp4",
+  "origen": "WhatsApp Video 2026-01-23 at 7.37.16 PM.mp4"
+ },
+ {
+  "n": 8,
+  "tipo": "video",
+  "archivo": "material/videos/v08.mp4",
+  "origen": "“Open House con beneficios de hasta $300,000”.mp4"
+ }
+]
