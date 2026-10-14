@@ -1,0 +1,23 @@
+name: Traer material de Bella Vittoria desde Drive
+on:
+  workflow_dispatch:
+  push:
+    paths: [herramientas/traer_material.py, .github/workflows/material.yml, material/PEDIR]
+permissions:
+  contents: write
+jobs:
+  material:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: sudo apt-get install -y ffmpeg >/dev/null && pip install google-api-python-client==2.149.0 google-auth==2.34.0 pillow==10.4.0
+      - env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          DRIVE_CARPETA: 1uQSIWZOTXmABsNvNdVtkFMDjWeFouljh
+        run: python -u herramientas/traer_material.py
+      - run: |
+          git config user.email "claude@acierta.pro"; git config user.name "Material automatico"
+          git add material; git diff --cached --quiet || (git commit -m "Material de Bella Vittoria desde Drive" && git push)
