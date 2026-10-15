@@ -4,7 +4,7 @@ on:
   push:
     paths: [herramientas/envio_corredores.py, .github/workflows/envio.yml, herramientas/envio.txt]
 permissions:
-  contents: read
+  contents: write
 jobs:
   envio:
     runs-on: ubuntu-latest
@@ -16,4 +16,7 @@ jobs:
       - env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           AMPI_CSV: ${{ secrets.AMPI_CSV }}
-        run: python -u herramientas/envio_corredores.py
+        run: python -u herramientas/envio_corredores.py | tee herramientas/envio_resumen.txt
+      - run: |
+          git config user.email "claude@acierta.pro"; git config user.name "Lista de envio"
+          git add herramientas/envio_resumen.txt; git diff --cached --quiet || (git commit -m "Resumen de la lista de envio (solo conteos)" && git push)
