@@ -109,10 +109,13 @@ if v:
 CAB = ["Clave", "Inmobiliaria", "Contacto", "Municipio", "Socio AMPI", "Comparte comisión", "Estatus EasyBroker", "Publicaciones EB", "Fuentes",
        "Celular / WhatsApp", "Teléfono oficina", "Correo", "Canal", "Enviar desde", "Día de envío", "Versión", "Enviar WhatsApp",
        "Enviado", "2.º mensaje", "Respondió", "BAJA", "Notas Javier", "Mensaje"]
-filas, n_wa = [], 0
+filas, n_wa, usados = [], 0, set()
 for x in lista:
     k = clave(x["inmobiliaria"]); numero_wa = x["cel"] or (x["tel"] if x["tel"].startswith("33") else "")
-    canal = "WhatsApp" if numero_wa else ("Correo" if "@" in x["correo"] else "Formulario EasyBroker" if "EasyBroker" in x["fuentes"] else "Sin contacto")
+    repetido = bool(numero_wa) and numero_wa in usados
+    if numero_wa: usados.add(numero_wa)
+    if repetido: numero_wa = ""
+    canal = ("Teléfono repetido: revisar" if repetido else "WhatsApp" if numero_wa else ("Correo" if "@" in x["correo"] else "Formulario EasyBroker" if "EasyBroker" in x["fuentes"] else "Sin contacto"))
     ver = len(filas) % 5; msj = mensaje(x, ver)
     desde = dia = liga = ""
     if numero_wa:
