@@ -115,7 +115,9 @@ for x in lista:
     repetido = bool(numero_wa) and numero_wa in usados
     if numero_wa: usados.add(numero_wa)
     if repetido: numero_wa = ""
-    canal = ("Teléfono repetido: revisar" if repetido else "WhatsApp" if numero_wa else ("Correo" if "@" in x["correo"] else "Formulario EasyBroker" if "EasyBroker" in x["fuentes"] else "Sin contacto"))
+    sin_wa = "no wa" in sa(previo.get(k, {}).get("Notas Javier", ""))
+    if sin_wa: numero_wa = ""          # ya se comprobó que no tiene WhatsApp: pasa al siguiente canal
+    canal = ("Teléfono repetido: revisar" if repetido else "WhatsApp" if numero_wa else ("Llamar (sin WhatsApp)" if sin_wa and not ("@" in x["correo"]) and "EasyBroker" not in x["fuentes"] else "") or ("Correo" if "@" in x["correo"] else "Formulario EasyBroker" if "EasyBroker" in x["fuentes"] else "Sin contacto"))
     ver = len(filas) % 5; msj = mensaje(x, ver)
     desde = dia = liga = ""
     if numero_wa:
