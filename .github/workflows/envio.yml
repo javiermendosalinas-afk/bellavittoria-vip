@@ -1,0 +1,19 @@
+name: Armar lista de envío a corredores
+on:
+  workflow_dispatch:
+  push:
+    paths: [herramientas/envio_corredores.py, .github/workflows/envio.yml, herramientas/envio.txt]
+permissions:
+  contents: read
+jobs:
+  envio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install gspread==6.1.2 google-auth==2.34.0
+      - env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          AMPI_CSV: ${{ secrets.AMPI_CSV }}
+        run: python -u herramientas/envio_corredores.py
