@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
+<!-- Google tag (Google Ads AW-741016611 + GA4 G-NXLF42YLWF): mide visitas y clics a WhatsApp -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-741016611"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','AW-741016611');gtag('config','G-NXLF42YLWF');
+window.ACIERTA_CONV_LABEL='';/* cuando exista la conversion "Clic en WhatsApp", va aqui su etiqueta */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me/"],a[href^="tel:"]');if(!a)return;
+ var wa=a.href.indexOf('wa.me/')>=0;gtag('event',wa?'clic_whatsapp':'clic_llamada',{sitio:location.hostname,destino:a.href.slice(0,120)});
+ if(wa&&window.ACIERTA_CONV_LABEL)gtag('event','conversion',{send_to:'AW-741016611/'+window.ACIERTA_CONV_LABEL});},true);
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Bella Vittoria · Departamentos nuevos en Lomas de la Victoria, Tlaquepaque · desde $3,450,000</title>
