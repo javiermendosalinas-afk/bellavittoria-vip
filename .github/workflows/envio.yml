@@ -1,6 +1,8 @@
 name: Armar lista de envío a corredores
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "15 */3 * * *"
   push:
     paths: [herramientas/envio_corredores.py, .github/workflows/envio.yml, herramientas/envio.txt]
 permissions:
