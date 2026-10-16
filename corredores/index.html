@@ -118,7 +118,7 @@ async function dibujar(){
   cempasuchil(W-110,fotoH-90*s,52*s);cempasuchil(W-200,fotoH-40*s,34*s);
   let y=fotoH+(fmt==="cuadrado"?62:fmt==="historia"?40:80)*s;const paso=(fmt==="cuadrado"?50:62)*s;
   texto("Sábado 31 de octubre · 10:00 a 14:00",60,y,44*s,C.cemp,"800","Montserrat","left",W-120);y+=paso;
-  texto("Lomas de la Victoria, Tlaquepaque",60,y,32*s,"#fff","600");y+=paso*1.15;
+  texto("Lomas de la Victoria, Guadalajara",60,y,32*s,"#fff","600");y+=paso*1.15;
   texto("Departamentos desde $3,450,000",60,y,46*s,"#fff","800","Montserrat","left",W-120);y+=paso*0.85;
   texto("2 recámaras · 2 baños · 70 a 78 m² · Entrega inmediata",60,y,28*s,"#E9DFF0","400","Montserrat","left",W-120);y+=paso*0.75;
   texto("Infonavit, Cofinavit o crédito bancario",60,y,28*s,"#E9DFF0","400");y+=paso*0.55;
@@ -135,13 +135,13 @@ async function dibujar(){
   texto(tel,tx,fy+fh*0.88,44*s,C.mag,"800","Montserrat","left",W-tx-70);
   ctx.font=`400 ${17*s}px Montserrat, Arial`;ctx.fillStyle="rgba(255,255,255,.75)";ctx.textAlign="center";
   ctx.fillText("Precio de lista vigente al 31 de octubre de 2026, sujeto a disponibilidad. Calentador solar: uno por unidad apartada",W/2,H-34,W-60);
-  ctx.fillText("durante el evento. Desarrollo comercializado por Acierta Max · bellavittoria.vip",W/2,H-12,W-60);
+  ctx.fillText("durante el evento. Cobre 4232, Lomas de la Victoria, San Pedro Tlaquepaque · Comercializa Acierta Max · bellavittoria.vip",W/2,H-12,W-60);
   actualizarTexto(inmo,ases,tel);
 }
 function actualizarTexto(inmo,ases,tel){$("texto").value=
 `🌼💀 Open House de Día de Muertos en Bella Vittoria
 📅 Sábado 31 de octubre, de 10:00 a 14:00
-📍 Lomas de la Victoria, Tlaquepaque
+📍 Lomas de la Victoria, Guadalajara (donde se juntan Guadalajara, Zapopan y Tlaquepaque)
 
 ✅ Departamentos de entrega inmediata desde $3,450,000
 ✅ 2 recámaras, 2 baños, de 70 a 78 m²
