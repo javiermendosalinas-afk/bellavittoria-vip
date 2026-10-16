@@ -78,10 +78,10 @@ footer a{color:inherit}
 </main>
 <footer>Bella Vittoria Residencial · Cobre 4232, Lomas de la Victoria, Tlaquepaque · Comercializa Acierta Max, S.A. de C.V. · <a href="https://bellavittoria.vip">bellavittoria.vip</a> · <a href="https://acierta.pro/aviso-privacidad.html">Aviso de privacidad</a></footer>
 <script>
-const FOTOS=["fachada","fachada-acceso","lobby-1","cocina-comedor","recamara-1","jardin-1","juegos-2","patio-vista"];
+const FOTOS=["rooftop-1","sala-cocina","fachada","pareja","cocina-comedor","recamara-1","rooftop-2","jardin-1"];
 const F={post:[1080,1350],historia:[1080,1920],cuadrado:[1080,1080]};
 const C={mor:"#2A0B3D",cemp:"#F28C28",mag:"#C2185B",ama:"#FFC23A",crema:"#FFF7EC"};
-let fmt="post", foto="fachada", logo=null; const imgs={};
+let fmt="post", foto="rooftop-1", logo=null; const imgs={};
 const $=id=>document.getElementById(id), cv=$("lienzo"), ctx=cv.getContext("2d");
 function cargar(src){return new Promise((ok,no)=>{const i=new Image();i.onload=()=>ok(i);i.onerror=no;i.src=src;});}
 const fotosDiv=$("fotos");
