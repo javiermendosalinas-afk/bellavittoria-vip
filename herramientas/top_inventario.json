@@ -1,0 +1,99 @@
+{
+ "total_inmobiliarias": 1145,
+ "zmg": 1025,
+ "publicaciones_zmg": 44680,
+ "top15": [
+  {
+   "inmobiliaria": "KW GRAND",
+   "publicaciones": 1046,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "VECORE",
+   "publicaciones": 888,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "Gaant Grupo Inmobiliario",
+   "publicaciones": 879,
+   "estatus": "Invitación enviada",
+   "municipio": "Guadalajara"
+  },
+  {
+   "inmobiliaria": "Leon & Asesores Inmobiliarios Real Estate S.A. de C.V.",
+   "publicaciones": 597,
+   "estatus": "Colaborando",
+   "municipio": "Guadalajara"
+  },
+  {
+   "inmobiliaria": "Espacio 360",
+   "publicaciones": 577,
+   "estatus": "Colaborando",
+   "municipio": "Guadalajara"
+  },
+  {
+   "inmobiliaria": "H&H Asesores Inmobiliarios",
+   "publicaciones": 524,
+   "estatus": "Invitación enviada",
+   "municipio": "Guadalajara"
+  },
+  {
+   "inmobiliaria": "Inmobiliaria Sierra Plus",
+   "publicaciones": 522,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "GlobalKey International Real Estate",
+   "publicaciones": 521,
+   "estatus": "Colaborando",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "Capital Brokers",
+   "publicaciones": 520,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "PRYA GRUPO INMOBILIARIO",
+   "publicaciones": 490,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "Aristia Inmobiliaria",
+   "publicaciones": 482,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "Grupo Guia",
+   "publicaciones": 441,
+   "estatus": "Invitación enviada",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "Sierra Providencia",
+   "publicaciones": 438,
+   "estatus": "Invitación enviada",
+   "municipio": "Guadalajara"
+  },
+  {
+   "inmobiliaria": "RE/MAX Puerta de Hierro",
+   "publicaciones": 421,
+   "estatus": "Colaborando",
+   "municipio": "Zapopan"
+  },
+  {
+   "inmobiliaria": "Capriori Bienes Raices  ( PAIS)",
+   "publicaciones": 394,
+   "estatus": "Colaborando",
+   "municipio": "Zapopan"
+  }
+ ],
+ "colaborando": 535,
+ "pub_colaborando": 14633
+}
