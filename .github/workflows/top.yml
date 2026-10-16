@@ -1,0 +1,20 @@
+name: Top inventario por inmobiliaria
+on:
+  push:
+    paths: [herramientas/top_inventario.py, .github/workflows/top.yml]
+permissions:
+  contents: write
+jobs:
+  top:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install gspread==6.1.2 google-auth==2.34.0
+      - env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: python -u herramientas/top_inventario.py
+      - run: |
+          git config user.email "claude@acierta.pro"; git config user.name "Top inventario"
+          git add herramientas/top_inventario.json; git diff --cached --quiet || (git commit -m "Top inventario (solo nombres y conteos)" && git pull --rebase && git push)
