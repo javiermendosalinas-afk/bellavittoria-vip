@@ -88,6 +88,8 @@ CIERRES = ["Para registrar a tu cliente (nombre y últimos 4 dígitos de su celu
            "Registra a tu cliente o pide información al 33 2497 0007. ¡Éxito!",
            "Para registros y visitas: 33 2497 0007. ¡Quedo a tus órdenes!"]
 BAJA = "Si prefieres no recibir más información, respóndeme BAJA."
+# Inmobiliarias que pidieron BAJA (clave sin espacios ni acentos). Nunca se les vuelve a contactar.
+BAJAS_FIJAS = {"vsdesarrollador"}   # Grupo VS Desarrollador (pidió baja, oct 2026)
 def mensaje(x, v):
     c = f" ({x['contacto'].split()[0].title()})" if x["contacto"] and sa(x["contacto"]) != sa(x["inmobiliaria"]) and len(x["contacto"].split()) <= 5 else ""
     partes = [INICIOS[v].format(n=x["inmobiliaria"].strip(), c=c), PUENTES[v] + " " + PROMO]
@@ -117,7 +119,13 @@ for x in lista:
     if repetido: numero_wa = ""
     sin_wa = "no wa" in sa(previo.get(k, {}).get("Notas Javier", ""))
     if sin_wa: numero_wa = ""          # ya se comprobó que no tiene WhatsApp: pasa al siguiente canal
-    canal = ("Teléfono repetido: revisar" if repetido else "WhatsApp" if numero_wa else ("Llamar (sin WhatsApp)" if sin_wa and not ("@" in x["correo"]) and "EasyBroker" not in x["fuentes"] else "") or ("Correo" if "@" in x["correo"] else "Formulario EasyBroker" if "EasyBroker" in x["fuentes"] else "Sin contacto"))
+    # BAJA: quien pidió no recibir más información sale de TODOS los canales
+    # (WhatsApp, correo, formulario y llamada). Se respeta la columna "BAJA",
+    # una nota con la palabra "baja" o la lista fija de abajo.
+    baja = bool(str(previo.get(k, {}).get("BAJA", "")).strip()) or "baja" in sa(previo.get(k, {}).get("Notas Javier", "")) \
+           or k in BAJAS_FIJAS
+    if baja: numero_wa = ""
+    canal = "No contactar (BAJA)" if baja else ("Teléfono repetido: revisar" if repetido else "WhatsApp" if numero_wa else ("Llamar (sin WhatsApp)" if sin_wa and not ("@" in x["correo"]) and "EasyBroker" not in x["fuentes"] else "") or ("Correo" if "@" in x["correo"] else "Formulario EasyBroker" if "EasyBroker" in x["fuentes"] else "Sin contacto"))
     ver = len(filas) % 5; msj = mensaje(x, ver)
     desde = dia = liga = ""
     if numero_wa:
@@ -127,7 +135,7 @@ for x in lista:
     p = previo.get(k, {})
     filas.append([k, x["inmobiliaria"], x["contacto"], x["municipio"], "Sí" if ("AMPI" in x["fuentes"] or sa(x["ampi"]) in ("si", "sí")) else (x["ampi"] or ""),
                   x["comparte"], x["estatus_eb"], x["publicaciones"] or "", ", ".join(sorted(x["fuentes"])), numero_wa, x["tel"] if x["tel"] != numero_wa else "",
-                  x["correo"], canal, desde, dia, ver + 1, liga, p.get("Enviado", ""), p.get("2.º mensaje", ""), p.get("Respondió", ""), p.get("BAJA", ""),
+                  x["correo"], canal, desde, dia, ver + 1, liga, p.get("Enviado", ""), p.get("2.º mensaje", ""), p.get("Respondió", ""), (p.get("BAJA", "") or ("Sí" if baja else "")),
                   p.get("Notas Javier", ""), msj])
 ws.clear()
 ws.resize(rows=len(filas) + 5, cols=len(CAB))
