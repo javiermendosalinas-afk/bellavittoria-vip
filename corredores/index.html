@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kit para corredores · Open House de Día de Muertos · Bella Vittoria</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="4% de comisión en Bella Vittoria · Open House de Día de Muertos">
+<meta property="og:description" content="Sábado 31 de octubre, 10:00 a 14:00. Crea tu publicidad con tu logo y tu WhatsApp en 30 segundos.">
+<meta property="og:image" content="https://bellavittoria.vip/corredores/invitacion-4.jpg">
+<meta property="og:image:width" content="1086"><meta property="og:image:height" content="1448">
+<meta property="og:url" content="https://bellavittoria.vip/corredores/">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Genera en segundos tu publicidad del Open House de Día de Muertos en Bella Vittoria, con tu logotipo y tu WhatsApp.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -161,6 +168,13 @@ $("todas").onclick=async()=>{const orig=fmt;for(const f of ["post","historia","c
 $("copiar").onclick=()=>{navigator.clipboard.writeText($("texto").value).then(()=>{$("copiar").textContent="¡Copiado!";setTimeout(()=>$("copiar").textContent="Copiar texto",1800);});};
 if(navigator.canShare){$("compartir").hidden=false;$("compartir").onclick=()=>cv.toBlob(async b=>{const file=new File([b],nombreArchivo(fmt),{type:"image/png"});
   if(navigator.canShare({files:[file]})){try{await navigator.share({files:[file],text:$("texto").value});}catch(e){}}else descargarCanvas(fmt);},"image/png");}
+(function(){ // liga personalizada: ?inmo=…&tel=…&asesor=… llena los datos de la inmobiliaria
+  const q=new URLSearchParams(location.search);
+  if(q.get("inmo"))$("inmo").value=q.get("inmo").slice(0,40);
+  if(q.get("asesor"))$("asesor").value=q.get("asesor").slice(0,40);
+  if(q.get("tel"))$("tel").value=q.get("tel").replace(/\D/g,"").slice(-10);
+  if(q.get("inmo")){const h=document.querySelector("header p");if(h)h.innerHTML="¡Hola, <b>"+q.get("inmo").replace(/[<>&]/g,"")+"</b>! Tu publicidad ya está lista con tus datos. Sube tu logotipo si quieres y descarga tus imágenes.";}
+})();
 (document.fonts?document.fonts.ready:Promise.resolve()).then(()=>Promise.all([document.fonts.load("800 40px Montserrat"),document.fonts.load("italic 700 90px 'Playfair Display'")]).catch(()=>{})).then(dibujar);
 </script>
 </body>
