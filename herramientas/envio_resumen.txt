@@ -1,1 +1,1 @@
-Inmobiliarias únicas: 1288 | por canal: {'Formulario EasyBroker': 635, 'WhatsApp': 433, 'Correo': 79, 'Sin contacto': 120, 'Llamar (sin WhatsApp)': 6, 'No contactar (BAJA)': 1, 'Teléfono repetido: revisar': 14} | días de envío por WhatsApp: 3 | contactos para importar: 515
+Inmobiliarias únicas: 1288 | por canal: {'Formulario EasyBroker': 639, 'WhatsApp': 421, 'Correo': 87, 'Sin contacto': 120, 'Llamar (sin WhatsApp)': 6, 'No contactar (BAJA)': 1, 'Teléfono repetido: revisar': 14} | días de envío por WhatsApp: 3 | contactos para importar: 511
