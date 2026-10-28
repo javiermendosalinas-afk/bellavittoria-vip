@@ -76,11 +76,13 @@ footer a{color:inherit}
       <button data-f="cuadrado">Cuadrado (Facebook)</button>
     </div>
     <canvas id="lienzo" width="1080" height="1350" aria-label="Vista previa de tu publicidad"></canvas>
+    <p id="avisoDatos" class="nota" style="color:#C2185B;font-weight:700" hidden>✍️ Escribe el nombre de tu inmobiliaria y tu WhatsApp para generar tu publicidad.</p>
     <div class="acc">
       <button class="btn" id="descargar">Descargar imagen</button>
       <button class="btn sec" id="compartir" hidden>Compartir</button>
       <button class="btn sec" id="todas">Descargar los 3 formatos</button>
     </div>
+    <p class="nota">📱 <b>En el celular:</b> toca <b>Compartir</b> y elige WhatsApp, Instagram o Facebook: se envía como foto y el texto queda copiado para pegarlo como pie de foto.<br>💻 <b>En la computadora:</b> descarga la imagen y, al enviarla por WhatsApp, adjúntala como <b>Fotos y videos</b> (no como Documento).</p>
     <label for="texto" style="margin-top:22px">Texto sugerido para tu publicación</label>
     <textarea id="texto" readonly></textarea>
     <div class="acc"><button class="btn sec" id="copiar">Copiar texto</button></div>
@@ -148,29 +150,38 @@ async function dibujar(){
   ctx.fillText("durante el evento. Cobre 4232, Lomas de la Victoria, San Pedro Tlaquepaque · Comercializa Acierta Max · bellavittoria.vip",W/2,H-12,W-60);
   actualizarTexto(inmo,ases,tel);
 }
-function actualizarTexto(inmo,ases,tel){$("texto").value=
-`🌼💀 Open House de Día de Muertos en Bella Vittoria
+function datosListos(){const inmo=$("inmo").value.trim(),tel=telFmt($("tel").value);return !!(inmo&&tel);}
+function avisoDatos(){const m=$("avisoDatos");if(m)m.hidden=datosListos();["descargar","todas","copiar","compartir"].forEach(id=>{const b=$(id);if(b){b.disabled=!datosListos();b.style.opacity=datosListos()?"1":".45";}});}
+function actualizarTexto(inmo,ases,tel){
+ if(!datosListos()){$("texto").value="✍️ Escribe el nombre de tu inmobiliaria y tu WhatsApp arriba: aquí aparecerá tu texto listo para publicar.";avisoDatos();return;}
+ $("texto").value=
+`🌼 Open House de Día de Muertos en Bella Vittoria
 📅 Sábado 31 de octubre, de 10:00 a 14:00
-📍 Lomas de la Victoria, Guadalajara (donde se juntan Guadalajara, Zapopan y Tlaquepaque)
+📍 Cobre 4232, Lomas de la Victoria, Guadalajara (donde se juntan Guadalajara, Zapopan y Tlaquepaque)
 
 ✅ Departamentos de entrega inmediata desde $3,450,000
 ✅ 2 recámaras, 2 baños, de 70 a 78 m²
 ✅ Infonavit, Cofinavit o crédito bancario
 🚶 Todo a pie: Soriana, Coppel y VIU en la esquina
-📍 Ubicación: https://www.google.com/maps/search/?api=1&query=BellaVittoria%20Residencial%20Cobre%204232&query_place_id=ChIJBfJ4Z2WtKIQRyzWSZl3_wRc
 🎁 Si apartas ese día: calentador solar de regalo
 
-Agenda tu visita conmigo: ${tel} (WhatsApp)
+Agenda tu visita conmigo por WhatsApp: ${tel}
 ${ases?ases+" · ":""}${inmo}
 
-Precio de lista vigente al 31 de octubre de 2026, sujeto a disponibilidad. Calentador solar: uno por unidad apartada durante el evento.`;}
-function nombreArchivo(f){return "BellaVittoria_DiaDeMuertos_"+f+".png";}
-function descargarCanvas(f){return new Promise(ok=>cv.toBlob(b=>{const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=nombreArchivo(f);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);ok();},"image/png"));}
+Precio de lista vigente al 31 de octubre de 2026, sujeto a disponibilidad. Calentador solar: uno por unidad apartada durante el evento.`;
+ avisoDatos();}
+function nombreArchivo(f){return "BellaVittoria_OpenHouse_"+f+".jpg";}
+// JPG ligero (menos de 500 kB) para que WhatsApp e Instagram lo traten como foto
+function blobJPG(){return new Promise(ok=>{const intenta=q=>cv.toBlob(b=>{if(b.size>480*1024&&q>0.5)intenta(q-0.08);else ok(b);},"image/jpeg",q);intenta(0.86);});}
+async function descargarCanvas(f){if(!datosListos()){avisoDatos();return;}const b=await blobJPG();const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=nombreArchivo(f);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),4000);}
 $("descargar").onclick=()=>descargarCanvas(fmt);
-$("todas").onclick=async()=>{const orig=fmt;for(const f of ["post","historia","cuadrado"]){fmt=f;await dibujar();await descargarCanvas(f);await new Promise(r=>setTimeout(r,600));}fmt=orig;dibujar();};
-$("copiar").onclick=()=>{navigator.clipboard.writeText($("texto").value).then(()=>{$("copiar").textContent="¡Copiado!";setTimeout(()=>$("copiar").textContent="Copiar texto",1800);});};
-if(navigator.canShare){$("compartir").hidden=false;$("compartir").onclick=()=>cv.toBlob(async b=>{const file=new File([b],nombreArchivo(fmt),{type:"image/png"});
-  if(navigator.canShare({files:[file]})){try{await navigator.share({files:[file],text:$("texto").value});}catch(e){}}else descargarCanvas(fmt);},"image/png");}
+$("todas").onclick=async()=>{if(!datosListos()){avisoDatos();return;}const orig=fmt;for(const f of ["post","historia","cuadrado"]){fmt=f;await dibujar();await descargarCanvas(f);await new Promise(r=>setTimeout(r,700));}fmt=orig;dibujar();};
+$("copiar").onclick=()=>{if(!datosListos()){avisoDatos();return;}navigator.clipboard.writeText($("texto").value).then(()=>{$("copiar").textContent="¡Copiado!";setTimeout(()=>$("copiar").textContent="Copiar texto",1800);});};
+if(navigator.canShare){$("compartir").hidden=false;$("compartir").onclick=async()=>{
+  if(!datosListos()){avisoDatos();return;}
+  const b=await blobJPG();const file=new File([b],nombreArchivo(fmt),{type:"image/jpeg"});const txt=$("texto").value;
+  try{await navigator.clipboard.writeText(txt);}catch(e){}   // por si la app no recibe el texto: queda copiado para pegarlo como pie de foto
+  if(navigator.canShare({files:[file]})){try{await navigator.share({files:[file],text:txt});}catch(e){}}else descargarCanvas(fmt);};}
 (function(){ // liga personalizada: ?inmo=…&tel=…&asesor=… llena los datos de la inmobiliaria
   const q=new URLSearchParams(location.search);
   if(q.get("inmo"))$("inmo").value=q.get("inmo").slice(0,40);
