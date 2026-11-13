@@ -30,7 +30,6 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 {"@context":"https://schema.org","@graph":[
  {"@type":"ApartmentComplex","@id":"https://bellavittoria.vip/#bv","name":"Bella Vittoria","description":"Desarrollo de departamentos nuevos de 2 recámaras y 2 baños, de 70 a 78 m², con roof top, lobby, áreas infantiles, jardines interiores y seguridad 24 horas. Arquitectura de Krystel Escudero.","url":"https://bellavittoria.vip/","image":["https://bellavittoria.vip/img/fachada.jpg","https://bellavittoria.vip/img/cocina-comedor.jpg","https://bellavittoria.vip/img/rooftop-1.jpg"],"geo":{"@type":"GeoCoordinates","latitude":20.63381,"longitude":-103.39711},"address":{"@type":"PostalAddress","streetAddress":"Cobre 4232","addressLocality":"Lomas de la Victoria, San Pedro Tlaquepaque","addressRegion":"Jalisco","addressCountry":"MX"},"numberOfBedrooms":2,"numberOfBathroomsTotal":2,"floorSize":{"@type":"QuantitativeValue","minValue":70,"maxValue":78,"unitCode":"MTK"},"petsAllowed":"Consultar reglamento","amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Roof top"},{"@type":"LocationFeatureSpecification","name":"Lobby"},{"@type":"LocationFeatureSpecification","name":"Área de juegos infantiles"},{"@type":"LocationFeatureSpecification","name":"Jardines interiores"},{"@type":"LocationFeatureSpecification","name":"Seguridad 24 horas"}]},
  {"@type":"Offer","itemOffered":{"@id":"https://bellavittoria.vip/#bv"},"price":"3450000","priceCurrency":"MXN","availability":"https://schema.org/InStock","seller":{"@type":"RealEstateAgent","name":"Acierta Max","url":"https://acierta.pro","telephone":"+52 33 3377 7337"}},
- {"@type":"Event","name":"Open House de Día de Muertos en Bella Vittoria","startDate":"2026-10-31T10:00:00-06:00","endDate":"2026-10-31T14:00:00-06:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Bella Vittoria","address":"Cobre 4232, Lomas de la Victoria, Tlaquepaque, Jalisco"},"organizer":{"@type":"RealEstateAgent","name":"Acierta Max","url":"https://acierta.pro"},"isAccessibleForFree":true},
  {"@type":"FAQPage","mainEntity":[
   {"@type":"Question","name":"¿Dónde está Bella Vittoria?","acceptedAnswer":{"@type":"Answer","text":"En Cobre 4232, colonia Lomas de la Victoria, San Pedro Tlaquepaque, dentro de Periférico y a minutos de Plaza del Sol. A unos metros, en la esquina de Av. Conchitas y Cruz del Sur, hay Soriana, Coppel, VIU, iglesias y gasolineras."}},
   {"@type":"Question","name":"¿Cuánto cuesta un departamento en Bella Vittoria?","acceptedAnswer":{"@type":"Answer","text":"Desde $3,450,000 MXN con un cajón de estacionamiento incluido y entrega inmediata, por debajo de su avalúo de $3,700,000. El precio se confirma por escrito antes de apartar."}},
@@ -72,10 +71,11 @@ p{margin:0 0 1em}
 .barra .btn{padding:10px 16px}
 @media(max-width:900px){.barra nav{display:none}}
 
-/* aviso open house */
+/* aviso de promoción vigente */
 .oh{background:var(--grafito);color:#fff;border-top:1px solid rgba(255,255,255,.08)}
 .oh .contenedor{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;font-size:.98rem;text-align:center}
 .oh b{color:#F2B35B;font-weight:600}
+.oh{background:linear-gradient(90deg,#7a1020,#1f5a3a)}
 .oh a{color:#fff;font-weight:600}
 
 /* portada: foto del edificio + panel de ladrillo en espiga */
@@ -215,10 +215,10 @@ footer b{color:#fff}
   </div>
 </header>
 
-<div class="oh" id="openhouse">
+<div class="oh" id="promo">
   <div class="contenedor">
-    <span>🌼 <b>Open House de Día de Muertos</b> · sábado 31 de octubre, de 10:00 a 14:00. Si apartas ese día, el calentador solar es gratis.</span>
-    <a href="https://wa.me/523333777337?text=Quiero%20ir%20al%20Open%20House%20de%20Bella%20Vittoria" target="_blank" rel="noopener">Confirmar asistencia</a>
+    <span>🎄 <b>Promoción navideña</b> · Aparta tu departamento antes del 31 de diciembre y llévate <b>gratis un calentador solar de agua</b>.</span>
+    <a href="https://wa.me/523333777337?text=BELLAVITTORIA%20Quiero%20la%20promoci%C3%B3n%20navide%C3%B1a" target="_blank" rel="noopener">Agendar mi visita</a>
   </div>
 </div>
 
@@ -390,7 +390,7 @@ footer b{color:#fff}
       <details><summary>¿Están listos para habitar?</summary><p>Sí, la entrega es inmediata.</p></details>
       <details><summary>¿Qué incluye el departamento?</summary><p>Dos recámaras, dos baños completos, cocina integral abierta al comedor, sala, área de lavado y un cajón de estacionamiento incluido en el precio. Las amenidades del edificio incluyen roof top, lobby, juegos infantiles, terraza con asadores y seguridad 24 horas.</p></details>
       <details><summary>¿Es buena opción para rentar?</summary><p>La renta de referencia en el desarrollo es de $15,000 al mes sin amueblar y $18,000 amueblado. La renta real depende del departamento, del mobiliario y del mercado al momento de rentar.</p></details>
-      <details><summary>¿Qué es el Open House del 31 de octubre?</summary><p>Un día de puertas abiertas con tema de Día de Muertos, de 10:00 a 14:00. Si apartas tu departamento durante el evento, te llevas gratis un calentador solar de agua (uno por unidad apartada).</p></details>
+      <details><summary>¿En qué consiste la promoción navideña?</summary><p>Si apartas tu departamento entre el 13 de noviembre y el 31 de diciembre de 2026, te llevas gratis un calentador solar de agua (uno por departamento apartado). Las condiciones se confirman por escrito antes de apartar.</p></details>
       <details><summary>¿Cómo evito un fraude al comprar?</summary><p>Visita el desarrollo, comprueba quién vende y con qué facultades, pide el contrato por escrito y no deposites solo porque te lo piden por mensaje. Con Acierta Verifica revisamos la documentación antes de que firmes.</p></details>
     </div>
   </div>
@@ -429,8 +429,8 @@ footer b{color:#fff}
 
 <script>
 (function(){
-  // Aviso del Open House: se retira solo después del 31 de octubre de 2026
-  if(new Date(Date.now()-6*3600e3).toISOString().slice(0,10)>"2026-10-31"){var oh=document.getElementById("openhouse");if(oh)oh.remove();}
+  // Promoción navideña: el aviso se retira solo después del 31 de diciembre de 2026
+  if(new Date(Date.now()-6*3600e3).toISOString().slice(0,10)>"2026-12-31"){var pr=document.getElementById("promo");if(pr)pr.remove();}
 
   // Calculadora de mensualidad
   var $=function(id){return document.getElementById(id)};
